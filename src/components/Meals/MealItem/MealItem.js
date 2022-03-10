@@ -1,6 +1,7 @@
 import React from 'react';
 import { Fragment } from 'react';
 import classes from './MealItem.module.css';
+import MealItemForm from './MealItemForm';
 
 const MealItem = props => {
     // return <Fragment>
@@ -26,6 +27,7 @@ const MealItem = props => {
             <div className={classes.price}>{price}</div>
             </div>
             <div>
+                <MealItemForm id={props.id}/>
                 {/* form to enter amount and add to cart button */}
             </div>
         
