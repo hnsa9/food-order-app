@@ -9,7 +9,8 @@ const Header = props => {
         <header className={classes.header}>
             <h1>My Restaurant</h1>
             {/* <button>Cart</button> */}
-            <HeaderCartButton/>
+            {/* onShowCart - showCartHandler in app.js */}
+            <HeaderCartButton onClick={props.onShowCart}/>
         </header>
         <div className={classes['main-image']}>
             {/* <img src={mealsImage}/> - local image */}
