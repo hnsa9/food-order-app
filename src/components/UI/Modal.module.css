@@ -8,6 +8,8 @@
   background-color: rgba(0, 0, 0, 0.75);
 }
 
+.content {   max-height: 35rem;   overflow: auto;   padding: 0 1rem; }
+
 .modal {
   position: fixed;
   top: 15vh;
