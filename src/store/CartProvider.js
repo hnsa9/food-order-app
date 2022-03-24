@@ -71,6 +71,12 @@ const cartReducer = (state, action) => {
     
     }
 
+    // clear form after submit
+    if (action.type === 'CLEAR') {
+        return defaultCartState
+
+    }
+
 
     return defaultCartState;
 };
@@ -90,12 +96,17 @@ const CartProvider = props => {
         dispatchCartAction({type:'REMOVE', id: id})
     };
 
+    const clearCartHandler = () => {
+        dispatchCartAction({type: 'CLEAR'});
+    }
+
     // dynamic content
     const cartContext = {
         items: cartState.items,
         totalAmount: cartState.totalAmount,
         addItem: addItemToCartHandler, 
-        removeItem: removeItemHandler
+        removeItem: removeItemHandler,
+        clearCart: clearCartHandler
     };
 
 
